@@ -1,9 +1,13 @@
 .boasVindas{
     display: flex;
+    gap: 10em;
+
+    .pesquisar{
+        color: blueviolet;
+        font-size: 2rem;
+        padding: 1rem;
+        align-content: flex-end;
+    }
 } 
 
-.pesquisar{
-    color: blueviolet;
-    font-size: 2rem;
-    padding: 0;
-}
+
