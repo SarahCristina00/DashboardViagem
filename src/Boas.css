@@ -1,5 +1,9 @@
 .boasVindas{
     display: flex;
-    flex-direction: column;
-    gap: 0.2em;
 } 
+
+.pesquisar{
+    color: blueviolet;
+    font-size: 2rem;
+    padding: 0;
+}
