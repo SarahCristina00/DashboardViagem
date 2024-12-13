@@ -1,13 +1,16 @@
 import { BsSuitcaseFill } from "react-icons/bs"; //icone de mala
+import Pesq from "./Pesquisar";
+import Adicionar from "./Adicionar";
 import "./Boas.css";
 
 
 function Boas(){
     return(
         <div className="boasVindas">
-            <BsSuitcaseFill className="icone"/>
+            <h1><BsSuitcaseFill className="icone"/>Dashboard</h1>
             <p>Bem vinde, Agnes!</p>
-            <button className="adicionar">Adicionar Viagem</button>
+            <Pesq/>
+            <Adicionar/>
         </div>
     )
 }
