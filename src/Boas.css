@@ -1,21 +1,10 @@
 .boasVindas{
     display: flex;
+    margin: 30px;
+    min-width: 100vh;
     gap: 10em;
     background-color: #ffffff;
-
-    .pesquisar{
-        color: blueviolet;
-        font-size: 2rem;
-        padding: 1rem;
-        align-content: flex-end;
-    }
-
-    .calendario h1{
-
-        display: flex;
-         gap: 10em; 
-         color: red;
-    }
+    align-items: center;
 } 
 
 

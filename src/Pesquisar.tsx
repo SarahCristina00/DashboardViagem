@@ -1,4 +1,5 @@
 import { FaSearchLocation } from "react-icons/fa"; //icone de pesquisa
+import './Pesquisar.css';
 
 function Pesq(){
     return(
