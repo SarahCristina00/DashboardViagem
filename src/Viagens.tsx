@@ -1,21 +1,43 @@
 import React from "react";
 
-type ViagensProps = {
+export type ViagensProps = {
     origem: string;
     destino: string;
     saida: string;
     chegada: string;
 };
 
-function Viagem({origem, destino, saida, chegada}: ViagensProps){
+function Viagens({viagens}: {viagens:ViagensProps[]}){
     return(
-        <div className="viagem">
-            <div>Origem: {origem}</div>
-            <div>Destino: {destino}</div>
-            <div>Horário de partida: {saida}</div>
-            <div>Horário de chegada: {chegada}</div>
+        <div className="viagens">
+            <h1>Viagens</h1>
+            {exibeViagens(viagens)}
         </div>
     );
 }
 
-export default Viagem;
+export function salvarViagem(setViagens: React.Dispatch<React.SetStateAction<ViagensProps[]>>, novaViagem: ViagensProps){
+    setViagens((viagensAnt: ViagensProps[]) => {
+        const todasViagens = [];
+        for (let i = 0; i < viagensAnt.length; i++) {
+            todasViagens.push(viagensAnt[i]);
+        }
+
+        todasViagens.push(novaViagem);
+
+        return todasViagens;
+    });
+}
+
+export function exibeViagens(viagens: ViagensProps[]){
+    return viagens.map((viagem,index)=>(
+        <div className="viagem" key={index}>
+            <div>Origem:{viagem.origem}</div>
+            <div>Destino: {viagem.destino}</div>
+            <div>Horário de saída: {viagem.saida}</div>
+            <div>Horário de Chegada: {viagem.chegada}</div>
+        </div>
+    ));
+}
+
+export default Viagens;

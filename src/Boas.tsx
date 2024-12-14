@@ -1,16 +1,19 @@
 import { BsSuitcaseFill } from "react-icons/bs"; //icone de mala
-import Pesq from "./Pesquisar";
 import Adicionar from "./Adicionar";
 import "./Boas.css";
+import {ViagensProps} from "./Viagens";
+
+interface BoasProps{
+    salvarViagem: (novaViagem: ViagensProps) => void;
+}
 
 
-function Boas(){
+function Boas({salvarViagem}: BoasProps){
     return(
         <div className="boasVindas">
             <h1><BsSuitcaseFill className="icone"/>Dashboard</h1>
             <p>Bem vinde, Agnes!</p>
-            <Pesq/>
-            <Adicionar/>
+            <Adicionar salvaViagem={salvarViagem}/>
         </div>
     )
 }
