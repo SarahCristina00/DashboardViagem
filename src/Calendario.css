@@ -1,0 +1,16 @@
+.Calendario{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 2rem;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.614);
+    font-size: 0.7em;
+
+    .Data{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-between;
+        font-size: 2em;
+    }
+}
