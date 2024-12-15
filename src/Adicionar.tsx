@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Adicionar.css';
 import {salvarViagem, ViagensProps} from './Viagens';
+//import Data from './Calendario';
 
 function Adicionar({salvaViagem}:{salvaViagem: (novaViagem: ViagensProps)=> void}){
     //Estados
@@ -9,6 +10,7 @@ function Adicionar({salvaViagem}:{salvaViagem: (novaViagem: ViagensProps)=> void
         destino: '',
         saida: '',
         chegada: '',
+        data:'',
     })
 
     const [botao,adicionando] = useState(false);
@@ -47,17 +49,22 @@ function Adicionar({salvaViagem}:{salvaViagem: (novaViagem: ViagensProps)=> void
 
                 <label>Horário de Saída: </label>
                 <input
-                    type='text'
+                    type='time'
                     value={viagem.saida}
                     onChange={(hora)=>adicionaViagem({...viagem, saida:hora.target.value})}
                 />
 
                 <label>Horário de Chegada: </label>
                 <input
-                    type='text'
+                    type='time'
                     value={viagem.chegada}
                     onChange={(hora)=>adicionaViagem({...viagem, chegada:hora.target.value})}
                 />
+
+                <label>Dia de Partida: </label>
+                <input type="date" 
+                value={viagem.data}
+                onChange={(data)=>adicionaViagem({...viagem,data:data.target.value})}/>
                 <button type='submit'>Salvar Viagem</button>
             </form>
         )}

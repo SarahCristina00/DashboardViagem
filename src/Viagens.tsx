@@ -5,6 +5,7 @@ export type ViagensProps = {
     destino: string;
     saida: string;
     chegada: string;
+    data: string;
 };
 
 function Viagens({viagens}: {viagens:ViagensProps[]}){
@@ -36,6 +37,7 @@ export function exibeViagens(viagens: ViagensProps[]){
             <div>Destino: {viagem.destino}</div>
             <div>Horário de saída: {viagem.saida}</div>
             <div>Horário de Chegada: {viagem.chegada}</div>
+            <div>Data de viagem: {viagem.data}</div>
         </div>
     ));
 }
