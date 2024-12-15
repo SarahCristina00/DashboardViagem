@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Adicionar.css';
 import {salvarViagem, ViagensProps} from './Viagens';
-//import Data from './Calendario';
+
 
 function Adicionar({salvaViagem}:{salvaViagem: (novaViagem: ViagensProps)=> void}){
     //Estados
