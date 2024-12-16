@@ -3,9 +3,21 @@
     margin: 30px;
     min-width: 100vh;
     gap: 10em;
-    background-color: #ffffff;
+    background-color: #def03b;
     align-items: center;
 } 
+.icone{
+    color: rgb(158, 16, 123)
+}
+
+h1{
+    color:rgb(158, 16, 123)
+}
+p{
+    color:rgb(97, 1, 81);
+    font-size: 35px;
+    font-style: italic;
+}
 
 
 

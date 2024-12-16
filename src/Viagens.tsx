@@ -33,7 +33,7 @@ export function salvarViagem(setViagens: React.Dispatch<React.SetStateAction<Via
 export function exibeViagens(viagens: ViagensProps[]){
     return viagens.map((viagem,index)=>(
         <div className="viagem" key={index}>
-            <div>Origem:{viagem.origem}</div>
+            <div>Origem: {viagem.origem}</div>
             <div>Destino: {viagem.destino}</div>
             <div>Horário de saída: {viagem.saida}</div>
             <div>Horário de Chegada: {viagem.chegada}</div>

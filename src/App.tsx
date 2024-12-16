@@ -13,9 +13,11 @@ function App() {
   
   return(
     <>
-      <Boas salvarViagem={salvarViagem}/>
+      
+      < Boas salvarViagem={salvarViagem}/>
       <Data/>
       <Viagens viagens={viagens} />
+      
       </>
   )
 }
