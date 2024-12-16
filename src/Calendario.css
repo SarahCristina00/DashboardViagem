@@ -2,26 +2,28 @@
 /* Container geral */
 .calendario-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    font-family: Arial, sans-serif;
+
+    h1{
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
   }
   
   /* Estilo principal do calendário */
   .calendario-main {
-    flex: 2;
+    flex: 1;
     padding-right: 20px;
-  }
-  
-  .calendario-main h1 {
-    margin-bottom: 20px;
   }
   
   .calendario-input input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1.2rem;
     width: 200px;
   }
   
@@ -34,17 +36,17 @@
   
   .calendario-sidebar h2 {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 1.5rem;
+    color:rgb(158, 16, 123);
   }
   
   .calendario-sidebar ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .calendario-sidebar li {
+    color:rgb(97, 1, 81);
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 1.2rem;
   }
+
   
  

@@ -1,4 +1,5 @@
 import React from "react";
+import './Viagens.css';
 
 export type ViagensProps = {
     origem: string;
@@ -12,7 +13,9 @@ function Viagens({viagens}: {viagens:ViagensProps[]}){
     return(
         <div className="viagens">
             <h1>Viagens</h1>
-            {exibeViagens(viagens)}
+            <div className="todasViagens">
+                {exibeViagens(viagens)}
+            </div>
         </div>
     );
 }
@@ -33,11 +36,11 @@ export function salvarViagem(setViagens: React.Dispatch<React.SetStateAction<Via
 export function exibeViagens(viagens: ViagensProps[]){
     return viagens.map((viagem,index)=>(
         <div className="viagem" key={index}>
-            <div>Origem: {viagem.origem}</div>
-            <div>Destino: {viagem.destino}</div>
-            <div>Horário de saída: {viagem.saida}</div>
-            <div>Horário de Chegada: {viagem.chegada}</div>
-            <div>Data de viagem: {viagem.data}</div>
+            <p>Origem: {viagem.origem}</p>
+            <p>Destino: {viagem.destino}</p>
+            <p>Horário de saída: {viagem.saida}</p>
+            <p>Horário de Chegada: {viagem.chegada}</p>
+            <p>Data de viagem: {viagem.data}</p>
         </div>
     ));
 }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Adicionar.css';
-import {salvarViagem, ViagensProps} from './Viagens';
+import {ViagensProps} from './Viagens';
 
 
 function Adicionar({salvaViagem}:{salvaViagem: (novaViagem: ViagensProps)=> void}){
@@ -28,46 +28,46 @@ function Adicionar({salvaViagem}:{salvaViagem: (novaViagem: ViagensProps)=> void
 
     return(
         <>
-        {!botao &&(
-            <button className="adicionar" onClick={click}>Adicionar</button>
-        )}
-        {botao && (
-            <form onSubmit={informarViagem}>
-                <label>Origem: </label>
-                <input
-                    type='text'
-                    value={viagem.origem}
-                    onChange={(local)=>adicionaViagem({...viagem, origem:local.target.value})}
-                />
-                
-                <label>Destino: </label>
-                <input
-                    type='text'
-                    value={viagem.destino}
-                    onChange={(local)=>adicionaViagem({...viagem, destino:local.target.value})}
-                />
+            {!botao &&(
+                <button className="botao" onClick={click}>Adicionar Viagem</button>
+            )}
+            {botao && (
+                <form onSubmit={informarViagem}>
+                    <label>Origem: </label>
+                    <input
+                        type='text'
+                        value={viagem.origem}
+                        onChange={(local)=>adicionaViagem({...viagem, origem:local.target.value})}
+                    />
+                    
+                    <label>Destino: </label>
+                    <input
+                        type='text'
+                        value={viagem.destino}
+                        onChange={(local)=>adicionaViagem({...viagem, destino:local.target.value})}
+                    />
 
-                <label>Horário de Saída: </label>
-                <input
-                    type='time'
-                    value={viagem.saida}
-                    onChange={(hora)=>adicionaViagem({...viagem, saida:hora.target.value})}
-                />
+                    <label>Horário de Saída: </label>
+                    <input
+                        type='time'
+                        value={viagem.saida}
+                        onChange={(hora)=>adicionaViagem({...viagem, saida:hora.target.value})}
+                    />
 
-                <label>Horário de Chegada: </label>
-                <input
-                    type='time'
-                    value={viagem.chegada}
-                    onChange={(hora)=>adicionaViagem({...viagem, chegada:hora.target.value})}
-                />
+                    <label>Horário de Chegada: </label>
+                    <input
+                        type='time'
+                        value={viagem.chegada}
+                        onChange={(hora)=>adicionaViagem({...viagem, chegada:hora.target.value})}
+                    />
 
-                <label>Dia de Partida: </label>
-                <input type="date" 
-                value={viagem.data}
-                onChange={(data)=>adicionaViagem({...viagem,data:data.target.value})}/>
-                <button type='submit'>Salvar Viagem</button>
-            </form>
-        )}
+                    <label>Dia de Partida: </label>
+                    <input type="date" 
+                    value={viagem.data}
+                    onChange={(data)=>adicionaViagem({...viagem,data:data.target.value})}/>
+                    <button type='submit' className='botao'>Salvar Viagem</button>
+                </form>
+            )}
         </>  
     );
 }

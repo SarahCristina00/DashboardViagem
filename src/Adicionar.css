@@ -1,8 +1,25 @@
-.adicionar{
-    color: rgb(79, 17, 138);
-    font-size: 1rem;
-    height: fit-content;
+.botao{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
     padding: 1rem;
-    width: 110px ;
-    background-color: #ad8aab;
+    background-color:rgb(184, 223, 27);
+    margin-top: -5rem;
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+input{
+    margin-top: 10px; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .botao {
+        font-size: 1.2rem; 
+        padding: 0.8rem;  
+        margin-top: 0;
+        align-self: flex-start; 
+    }
 }
